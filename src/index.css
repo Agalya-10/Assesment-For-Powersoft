@@ -28,18 +28,25 @@
 button {
   margin-top: 10px;
 }
-/* src/styles/app.css */
 .app-container {
   padding: 20px;
 }
 .navbar {
-  background-color: #3f51b5;
-  padding: 10px;
+  position: sticky;
+  top: 0;
+  background-color: gray;
+  padding: 2px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
+  padding: 0px 20px;
 }
 .navbar li {
   margin: 0;
@@ -47,8 +54,10 @@ button {
 .navbar a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
+  padding-right: 40px;
 }
 .navbar a:hover {
-  text-decoration: underline;
+color: black;
+padding: 25px;
 }

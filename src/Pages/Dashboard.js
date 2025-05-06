@@ -22,28 +22,28 @@ const Dashboard = () => {
     <Box sx={{ p: isMobile ? 1 : 3 }}>
       <Grid container spacing={3} sx={{ mb: 4 }}>
         <Grid item xs={6} sm={6} md={3}>
-          <Paper elevation={3} sx={{ px:16,py:4, textAlign: 'center' }}>
+          <Paper elevation={3} sx={{ px:13,py:3, textAlign: 'center' }}>
             <Typography variant="h6">Projects</Typography>
             <Typography variant="h4" sx={{ my: 1 }}>{projectCount}</Typography>
             <LinearProgress variant="determinate" value={100} color="primary"sx={{ height: 8, borderRadius: 4 }}/>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
-          <Paper elevation={3} sx={{ px:15,py:4, textAlign: 'center' }}>
+          <Paper elevation={3} sx={{ px:12,py:3, textAlign: 'center' }}>
             <Typography variant="h6">Employees</Typography>
             <Typography variant="h4" sx={{ my: 1 }}>{employeeCount}</Typography>
             <LinearProgress variant="determinate" value={100} color="secondary"sx={{ height: 8, borderRadius: 4 }}/>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
-          <Paper elevation={3} sx={{ px:14,py:4, textAlign: 'center' }}>
+          <Paper elevation={3} sx={{ px:12,py:3, textAlign: 'center' }}>
             <Typography variant="h6">Total Tasks</Typography>
             <Typography variant="h4" sx={{ my: 1 }}>{taskCount}</Typography>
             <LinearProgress variant="determinate" value={100} color="info"sx={{ height: 8, borderRadius: 4 }}/>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
-          <Paper elevation={3} sx={{ px:12,py:4, textAlign: 'center' }}>
+          <Paper elevation={3} sx={{ px:9,py:3, textAlign: 'center' }}>
             <Typography variant="h6">Completion Rate</Typography>
             <Typography variant="h4" sx={{ my: 1 }}>{completionRate}%</Typography>
             <LinearProgress  variant="determinate" value={completionRate} color="success"sx={{ height: 8, borderRadius: 4 }}/>
@@ -77,7 +77,7 @@ const Dashboard = () => {
             <Grid item xs={12} sm={6} md={3} key={status}>
               <Droppable droppableId={status}>
             {(provided) => (
-            <Paper {...provided.droppableProps}ref={provided.innerRef}sx={{ py: 1,px:14, minHeight: '50px',backgroundColor: 'background.default'}}>
+            <Paper {...provided.droppableProps}ref={provided.innerRef}sx={{ py: 1,px:12, minHeight: '50px',backgroundColor: 'background.default'}}>
                 <Typography variant="subtitle1" sx={{ mb: 2 }}>{status} ({state.tasks.filter(t => t.status === status).length})</Typography>
                 {state.tasks.filter(task => task.status === status).map((task, index) => (
                 <Draggable key={task.id} draggableId={task.id} index={index}>

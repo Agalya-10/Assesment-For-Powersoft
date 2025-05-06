@@ -31,12 +31,8 @@ const EmployeeTable = ({ employees, handleEdit, openDeleteConfirm, isMobile }) =
               {!isMobile && <TableCell>{employee.email}</TableCell>}
               <TableCell>{employee.position}</TableCell>
               <TableCell>
-                <IconButton onClick={() => handleEdit(employee)} size="small" color="primary">
-                  <Edit fontSize={isMobile ? 'small' : 'medium'} />
-                </IconButton>
-                <IconButton onClick={() => openDeleteConfirm(employee.id)} size="small" color="error">
-                  <Delete fontSize={isMobile ? 'small' : 'medium'} />
-                </IconButton>
+                <IconButton onClick={() => handleEdit(employee)} size="small" color="success"><Edit fontSize={isMobile ? 'small' : 'medium'} /></IconButton>
+                <IconButton onClick={() => openDeleteConfirm(employee.id)} size="small" color="error"><Delete fontSize={isMobile ? 'small' : 'medium'} /></IconButton>
               </TableCell>
             </TableRow>
           ))}

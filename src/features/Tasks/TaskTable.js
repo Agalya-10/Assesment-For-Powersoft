@@ -49,7 +49,7 @@ const TaskTable = ({ tasks, handleEdit, openDeleteConfirm, isMobile }) => {
                   </TableCell>
                   <TableCell>
                     <Box sx={{ display: 'flex', gap: 1 }}>
-                      <IconButton onClick={() => handleEdit(task)}color="primary"size="small"><Edit /></IconButton>
+                      <IconButton onClick={() => handleEdit(task)}color="success"size="small"><Edit /></IconButton>
                       <IconButton onClick={() => openDeleteConfirm(task.id)}color="error"size="small"><Delete /></IconButton>
                     </Box>
                   </TableCell>

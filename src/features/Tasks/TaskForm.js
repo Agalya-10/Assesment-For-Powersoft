@@ -60,7 +60,7 @@ const TaskForm = ({formData,setFormData,handleSubmit,error,setError,resetForm,is
           {formData.id && (
             <Button onClick={resetForm}variant="outlined"size={isMobile ? 'small' : 'medium'}>Cancel</Button>
           )}
-          <Button type="submit"variant="contained"size={isMobile ? 'small' : 'medium'}>{formData.id ? 'Update Task' : 'Create Task'}</Button>
+          <Button type="submit"variant="contained" sx={{bgcolor:"gray"}} size={isMobile ? 'small' : 'medium'}>{formData.id ? 'Update Task' : 'Create Task'}</Button>
         </Box>
       </Box>
     </Box>

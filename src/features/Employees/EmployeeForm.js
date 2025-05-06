@@ -1,8 +1,6 @@
 import React from 'react';
 import {TextField, Button, Box, Typography, Divider, Alert, Avatar} from '@mui/material';
-const EmployeeForm = ({
-  formData, handleChange, handleSubmit, resetForm,
-  editId, error, setError, isMobile
+const EmployeeForm = ({formData, handleChange, handleSubmit, resetForm,editId, error, setError, isMobile
 }) => {
   return (
     <Box component="form" onSubmit={handleSubmit}>
@@ -23,7 +21,7 @@ const EmployeeForm = ({
           {editId && (
             <Button onClick={resetForm} variant="outlined" size={isMobile ? 'small' : 'medium'}>Cancel</Button>
           )}
-          <Button type="submit" variant="contained" size={isMobile ? 'small' : 'medium'}>
+          <Button type="submit" variant="contained" sx={{bgcolor:"gray"}}size={isMobile ? 'small' : 'medium'}>
             {editId ? 'Update Employee' : 'Add Employee'}
           </Button>
         </Box>

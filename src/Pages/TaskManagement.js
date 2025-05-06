@@ -53,7 +53,6 @@ const TaskManagement = () => {
   };
   return (
     <Box sx={{ padding: 3 }}>
-        <Typography variant="h5"  gutterBottom >Task Management</Typography>
         <TaskForm formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} error={error} setError={setError} isMobile={false} resetForm={() => setFormData({ title: '', description: '', assignedTo: '', dueDate: null, status: 'Pending', priority: 'Medium', images: [] })} />
       <Box sx={{ marginTop: 3 }}>
         <TaskTable tasks={state.tasks} handleEdit={handleEdit} openDeleteConfirm={openDeleteConfirm} isMobile={false} />

@@ -17,7 +17,7 @@ const ProjectForm = ({ isMobile, formData, handleChange, handleSubmit, resetForm
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2, mt: 2 }}>
             {editId && (<Button onClick={resetForm} variant="outlined" size={isMobile ? 'small' : 'medium'}>Cancel</Button>)}
-            <Button type="submit" variant="contained" size={isMobile ? 'small' : 'medium'}>
+            <Button type="submit" variant="contained" sx={{bgcolor:"gray"}} size={isMobile ? 'small' : 'medium'}>
               {editId ? 'Update Project' : 'Add Project'}
             </Button>
           </Box>
